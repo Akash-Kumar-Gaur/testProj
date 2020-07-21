@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Homepage from './components/HomePage';
+import ProductPage from './components/ProductPage';
+import TopBar from './components/Topbar';
 // React.Component
 // import React, { Component } from 'react;
 // Component
@@ -37,10 +39,26 @@ import Homepage from './components/HomePage';
 //   return null;
 // }
 
-export default class App extends Component{
-  render(){
-    return(
-      <Homepage />
+export default class App extends Component {
+  render() {
+    const path = window.location.pathname;
+    return (
+      // <Header />
+
+      path === '/' ?
+        <Homepage />
+        : (
+          path === '/shop' ?
+            <div>
+              <TopBar />
+              <ProductPage pageName="shop" />
+            </div>
+            :
+            <div>
+              <TopBar />
+              <ProductPage pageName='product'/>
+            </div>
+        )
     )
   }
 }

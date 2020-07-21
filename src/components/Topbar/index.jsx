@@ -11,9 +11,9 @@ export default class TopBar extends React.Component {
           <sup>{this.props.subtitle}</sup>
         </div>
         <ul className='list'>
-          <li>home</li>
-          <li>products</li>
-          <li>{this.props.fname}</li>
+          <li onClick={() => window.location.replace('/')} >home</li>
+          <li onClick={() => window.open('/product', '_blank')}>products</li>
+          <li onClick={() => window.location.replace('/shop')}>shop</li>
           <li>{this.props.lname}</li>
         </ul>
       </div>

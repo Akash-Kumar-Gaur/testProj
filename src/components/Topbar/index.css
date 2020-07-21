@@ -8,4 +8,5 @@
 .list > li {
   display: inline;
   padding: 1rem;
+  cursor: pointer;
 }
