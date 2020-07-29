@@ -44,21 +44,20 @@ export default class App extends Component {
     const path = window.location.pathname;
     return (
       // <Header />
-
-      path === '/' ?
+      // path === '/' ?
         <Homepage />
-        : (
-          path === '/shop' ?
-            <div>
-              <TopBar />
-              <ProductPage pageName="shop" />
-            </div>
-            :
-            <div>
-              <TopBar />
-              <ProductPage pageName='product'/>
-            </div>
-        )
+        // : (
+        //   path === '/shop' ?
+        //     <div>
+        //       <TopBar />
+        //       <ProductPage pageName="shop" />
+        //     </div>
+        //     :
+        //     <div>
+        //       <TopBar />
+        //       <ProductPage pageName='product'/>
+        //     </div>
+        // )
     )
   }
 }

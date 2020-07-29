@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import Form from '../Banner';
 import ProductPage from '../ProductPage';
 import TopBar from '../Topbar';
@@ -13,11 +13,17 @@ export default class Homepage extends React.Component {
       pageTitle: 'My Banner'
     }
   }
-
+  
   render() {
-
+    const containerRef = createRef();
     return (
-      <div>
+      <div style={{
+        height: '2000px',
+        backgroundColor: '#777'
+      }}
+      ref={containerRef}
+      >
+        {console.log('scroll', window.scrollY)}
         {/* My Homepage */}
         {
           this.state.pageTitle === 'My Banner' ? <TopBar
